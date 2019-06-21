@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+header {
+    background: linear-gradient(rgba(95, 63, 15, 0.548),rgba(95, 63, 15, 0.548)), 
+                url("img/Singer-1994-Porsche-911-Minnesota-rear-three-quarter-in-motion-03.jpg")
+                no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 75%;
+    font: small-caps bold 24px/1 sans-serif;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+header > * {
+    padding: 1% 5%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+    /* TODO Fix h2 items center aligning text instead of left aligning */
+    padding: 10px;
+}
+
+.container > * {
+    grid-column: 1 / -1;
+    max-width: 740px;
+}
+
+.container > div {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: max-content;
+    max-width: 100%;
+}
+.container > div > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 900px) {
+    
+}
