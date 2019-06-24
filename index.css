@@ -3,7 +3,7 @@
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(auto-fit, 1fr);
-    grid-template-rows: 50px auto 50px;
+    grid-template-rows: min-content auto 50px;
     grid-template-areas: 
         "h h h h h h h h h h h h"
         "m m c c c c c c c c c c"
@@ -11,10 +11,11 @@
         ;
 }
 
-.container > div {
+.container > * {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-family: sans-serif;
     font-size: 2em;
     color: #ffeead;
 }
@@ -26,10 +27,16 @@ html, body {
 
 .header {
     grid-area: h;
-    padding-left: 50%;
+    display: unset;
 }
 
-.header > a {
+nav {
+    max-width: 740px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav > a {
     font-size: 2em;
     color: #ffeead;
     text-decoration: none;
