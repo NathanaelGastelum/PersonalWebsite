@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-size: large;
 }
 header {
     background: linear-gradient(rgba(95, 63, 15, 0.548),rgba(95, 63, 15, 0.548)), 
@@ -17,53 +18,38 @@ header > * {
     padding: 1% 5%;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: auto max-content auto;
-    /* TODO Center page items without messing up alignment or size */
+h2 {
+    font-family: sans-serif;
 }
 
-.container > * {
-    grid-column-start: 2;
-    max-width: 740px;
-}
-
-/* .container > div {
-    grid-column: 1 / -1;
+.imgbox {
     max-width: 100%;
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: max-content;
-} */
-.container > div > img {
+}
+
+.imgbox > img {
     width: 100%;
     object-fit: cover;
 }
 
 .contact {
-    grid-column: 1 / -1;
     max-width: 100%;
+    display: grid;
     background-color: black;
     color: white;
     padding: 10px;
 }
 
 .contact > form {
-    grid-column-start: 2;
-    max-width: 740px;
     display: grid;
     grid-gap: 5px;
-}
-
-form > * {
-    font-family: sans-serif;
-    font-size: large;
 }
 
 form > label {
     padding-top: 20px;
     color: white;
+    font-family: sans-serif;
 }
 
 form > input {
@@ -85,6 +71,34 @@ form > input[type="submit"] {
     font-size: large;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 770px) {
+    .about {
+        display: grid;
+        grid-template-columns: auto max-content auto;
+    }
+
+    .about > * {
+        grid-column-start: 2;
+        max-width: 740px;
+    }
+
+    .imgbox {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: max-content;
+        padding-left: 10px
+    }
+
+    .imgbox > p {
+        grid-column-start: 1;
+        max-width: 740px;
+    }
+
+    .contact {
+        grid-template-columns: auto max-content auto;
+    }
     
+    .contact > form {
+        grid-column-start: 2;
+        width: 740px;
+    }
 }
