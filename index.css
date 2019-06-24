@@ -32,6 +32,7 @@ html, body {
 .header > a {
     font-size: 2em;
     color: #ffeead;
+    text-decoration: none;
 }
 
 .menu {
